@@ -1,5 +1,4 @@
 .statistics {
-  width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,7 +15,7 @@
 }
 
 .item {
-  width: 20%;
+  width: 70px;
   display: flex;
   flex-direction: column;
   align-items: center;
