@@ -1,5 +1,7 @@
 import user from './user.json';
+import statisticalData from './statistical-data.json';
 import Profile from 'components/Profile';
+import Statistics from 'components/Statistics';
 import Section from 'components/Section';
 
 function App() {
@@ -11,10 +13,11 @@ function App() {
           tag={user.tag}
           location={user.location}
           avatar={user.avatar}
-          followers={user.stats.followers}
-          views={user.stats.views}
-          likes={user.stats.likes}
+          stats={user.stats}
         />
+      </Section>
+      <Section>
+        <Statistics title="Upload stats" stats={statisticalData} />
       </Section>
     </div>
   );

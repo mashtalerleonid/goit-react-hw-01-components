@@ -4,6 +4,7 @@
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 0px 7px 5px 4px rgba(2, 12, 19, 0.15);
+  background-color: white;
 }
 
 .avatar {
