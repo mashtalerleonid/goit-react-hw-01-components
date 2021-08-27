@@ -1,10 +1,12 @@
 import user from './user.json';
 import statisticalData from './statistical-data.json';
 import friends from './friends.json';
+import transactions from './transaction.json';
 import Profile from 'components/Profile';
 import Statistics from 'components/Statistics';
 import Section from 'components/Section';
 import FriendList from 'components/FriendList';
+import TransactionHistory from 'components/TransactionHistory';
 
 function App() {
   return (
@@ -23,6 +25,9 @@ function App() {
       </Section>
       <Section>
         <FriendList friends={friends} />
+      </Section>
+      <Section>
+        <TransactionHistory items={transactions} />
       </Section>
     </div>
   );
