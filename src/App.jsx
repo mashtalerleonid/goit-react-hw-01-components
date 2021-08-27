@@ -1,18 +1,19 @@
-import profile from './user.json';
-import Profile from 'components/profile/Profile.jsx';
-import Section from 'components/section/Section.jsx';
-console.log(Profile);
+import user from './user.json';
+import Profile from 'components/Profile';
+import Section from 'components/Section';
 
 function App() {
   return (
     <div>
       <Section>
         <Profile
-          name={profile.name}
-          tag={profile.tag}
-          location={profile.location}
-          avatar={profile.avatar}
-          stats={profile.stats}
+          name={user.name}
+          tag={user.tag}
+          location={user.location}
+          avatar={user.avatar}
+          followers={user.stats.followers}
+          views={user.stats.views}
+          likes={user.stats.likes}
         />
       </Section>
     </div>
