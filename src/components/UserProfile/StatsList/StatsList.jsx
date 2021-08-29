@@ -1,15 +1,15 @@
 import StatListItem from 'components/UserProfile/StatsListItem';
 import PropTypes from 'prop-types';
-import s from './StatsList.module.css';
+import { Stats } from './StatsList.styled';
 
 function StatsList({ stats }) {
   const keys = Object.keys(stats);
   return (
-    <ul className={s.stats}>
+    <Stats>
       {keys.map(key => (
         <StatListItem key={key} label={key} quantity={stats[key]} />
       ))}
-    </ul>
+    </Stats>
   );
 }
 

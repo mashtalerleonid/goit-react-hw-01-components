@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
-import s from './StatsListItem.module.css';
+import { Item, Label, Quantity } from './StatsListItem.styled';
 
 function StatListItem({ label, quantity }) {
   return (
-    <li className={s.item}>
-      <span className={s.label}>{label}</span>
-      <span className={s.quantity}>{quantity}</span>
-    </li>
+    <Item>
+      <Label>{label}</Label>
+      <Quantity>{quantity}</Quantity>
+    </Item>
   );
 }
 

@@ -1,19 +1,19 @@
 import StatsList from 'components/UserProfile/StatsList';
 import PropTypes from 'prop-types';
-import s from './Profile.module.css';
+import { Card, Description, Avatar, Name, Tag } from './Profile.styled';
 
 function Profile({ name, tag, location, avatar, stats }) {
   return (
-    <div className={s.profile}>
-      <div className={s.description}>
-        <img src={avatar} alt="Аватар пользователя" className={s.avatar} />
-        <p className={s.name}>{name}</p>
-        <p className={s.tag}>@{tag}</p>
-        <p className={s.location}>{location}</p>
-      </div>
+    <Card>
+      <Description>
+        <Avatar src={avatar} alt="Аватар пользователя"></Avatar>
+        <Name>{name}</Name>
+        <Tag>@{tag}</Tag>
+        <p>{location}</p>
+      </Description>
 
       <StatsList stats={stats} />
-    </div>
+    </Card>
   );
 }
 

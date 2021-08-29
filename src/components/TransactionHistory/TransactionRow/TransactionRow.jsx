@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
-import s from './TransactionRow.module.css';
+import { Tr, Td, TdFirst } from './TransactionRow.styled';
 
 function TransactionRow({ type, amount, currency }) {
   return (
-    <tr>
-      <td className={s.type}>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
-    </tr>
+    <Tr>
+      <TdFirst>{type}</TdFirst>
+      <Td>{amount}</Td>
+      <Td>{currency}</Td>
+    </Tr>
   );
 }
 

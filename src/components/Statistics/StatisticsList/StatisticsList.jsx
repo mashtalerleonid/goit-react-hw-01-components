@@ -1,13 +1,13 @@
 import StatisticsListItem from 'components/Statistics/StatisticsListItem';
 import PropTypes from 'prop-types';
-import s from './StatisticsList.module.css';
+import { Statistics, StatList } from './StatisticsList.styled';
 
 function StatisticsList({ title, stats }) {
   return (
-    <section className={s.statistics}>
-      {title && <h2 className={s.title}>{title}</h2>}
+    <Statistics>
+      {title && <h2>{title}</h2>}
 
-      <ul className={s.stat_list}>
+      <StatList>
         {stats.map(stat => (
           <StatisticsListItem
             key={stat.id}
@@ -15,8 +15,8 @@ function StatisticsList({ title, stats }) {
             percentage={stat.percentage}
           />
         ))}
-      </ul>
-    </section>
+      </StatList>
+    </Statistics>
   );
 }
 

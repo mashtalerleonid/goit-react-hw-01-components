@@ -1,15 +1,15 @@
 import PropTypes from 'prop-types';
-import s from './TransactionTable.module.css';
 import TransactionRow from 'components/TransactionHistory/TransactionRow';
+import { Table, Th } from './TransactionTable.styled';
 
 function TransactionTable({ items }) {
   return (
-    <table className={s.transaction_history}>
+    <Table>
       <thead>
         <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+          <Th>Type</Th>
+          <Th>Amount</Th>
+          <Th>Currency</Th>
         </tr>
       </thead>
       <tbody>
@@ -22,7 +22,7 @@ function TransactionTable({ items }) {
           />
         ))}
       </tbody>
-    </table>
+    </Table>
   );
 }
 

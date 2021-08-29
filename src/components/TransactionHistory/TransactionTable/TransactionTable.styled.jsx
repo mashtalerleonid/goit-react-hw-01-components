@@ -1,23 +1,15 @@
-.transaction_history {
+import styled from '@emotion/styled';
+
+export const Table = styled.table`
   width: 600px;
   background-color: white;
   text-align: center;
   border-collapse: collapse;
-}
+`;
 
-th {
+export const Th = styled.th`
   padding: 10px;
   color: white;
   background-color: rgb(5, 192, 199);
   border: 1px solid rgb(160, 160, 160);
-}
-
-td {
-  width: calc(100% / 3);
-  padding: 10px 0;
-  border: 1px solid rgb(160, 160, 160);
-}
-
-tr:nth-child(even) {
-  background-color: rgba(215, 230, 230, 0.925);
-}
+`;

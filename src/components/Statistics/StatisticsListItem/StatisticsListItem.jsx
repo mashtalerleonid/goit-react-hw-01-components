@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
-import s from './StatisticsListItem.module.css';
+import { Item, Label } from './StatisticsListItem.styled';
 
 function StatisticsListItem({ label, percentage }) {
   return (
-    <li className={s.item} style={{ backgroundColor: randomColor() }}>
-      <span className={s.label}>{label}</span>
-      <span className={s.percentage}>{`${percentage}%`}</span>
-    </li>
+    <Item backgroundColor={randomColor()}>
+      <Label>{label}</Label>
+      <Label>{`${percentage}%`}</Label>
+    </Item>
   );
 }
 
@@ -14,6 +14,8 @@ StatisticsListItem.propTypes = {
   label: PropTypes.string.isRequired,
   percentage: PropTypes.number.isRequired,
 };
+
+export default StatisticsListItem;
 
 function randomColor() {
   let arr = [];
@@ -23,5 +25,3 @@ function randomColor() {
 
   return `rgb(${arr.join(',')})`;
 }
-
-export default StatisticsListItem;
