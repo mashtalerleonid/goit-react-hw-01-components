@@ -1,4 +1,4 @@
-import FriendListItem from 'components/FriendListItem';
+import FriendListItem from 'components/Friends/FriendListItem';
 import PropTypes from 'prop-types';
 import s from './FriendList.module.css';
 

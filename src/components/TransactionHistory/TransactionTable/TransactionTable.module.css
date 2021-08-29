@@ -21,8 +21,3 @@ td {
 tr:nth-child(even) {
   background-color: rgba(215, 230, 230, 0.925);
 }
-
-.type {
-  padding-left: 70px;
-  text-align: left;
-}

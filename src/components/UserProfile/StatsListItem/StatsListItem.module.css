@@ -1,0 +1,19 @@
+.item {
+  padding: 15px 0;
+  width: calc(100% / 3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item:not(:last-child) {
+  border-right: 1px solid gray;
+}
+
+.label {
+  color: grey;
+}
+
+.quantity {
+  font-weight: bold;
+}

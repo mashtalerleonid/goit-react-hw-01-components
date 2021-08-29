@@ -1,12 +1,12 @@
-import user from './user.json';
-import statisticalData from './statistical-data.json';
-import friends from './friends.json';
-import transactions from './transaction.json';
-import Profile from 'components/Profile';
-import Statistics from 'components/Statistics';
+import user from './data/user.json';
+import statisticalData from './data/statistical-data.json';
+import friends from './data/friends.json';
+import transactions from './data/transaction.json';
+import Profile from 'components/UserProfile/Profile';
+import StatisticsList from 'components/Statistics/StatisticsList';
 import Section from 'components/Section';
-import FriendList from 'components/FriendList';
-import TransactionHistory from 'components/TransactionHistory';
+import FriendList from 'components/Friends/FriendList';
+import TransactionTable from 'components/TransactionHistory/TransactionTable';
 
 function App() {
   return (
@@ -21,13 +21,13 @@ function App() {
         />
       </Section>
       <Section>
-        <Statistics title="Upload stats" stats={statisticalData} />
+        <StatisticsList title="Upload stats" stats={statisticalData} />
       </Section>
       <Section>
         <FriendList friends={friends} />
       </Section>
       <Section>
-        <TransactionHistory items={transactions} />
+        <TransactionTable items={transactions} />
       </Section>
     </div>
   );
